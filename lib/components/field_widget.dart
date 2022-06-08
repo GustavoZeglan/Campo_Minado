@@ -3,16 +3,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class FieldWidget extends StatelessWidget {
+  final Field field;
+  final void Function(Field) onOpen;
+  final void Function(Field) onSwitchMarked;
+
   FieldWidget({
-    Key key,
     @required this.field,
     @required this.onOpen,
     @required this.onSwitchMarked,
-  }) : super(key: key);
-
-  Field field;
-  Function(Field) onOpen;
-  Function(Field) onSwitchMarked;
+  });
 
   Widget _getImage() {
     int amnMines = field.amountMinesOnNeighbourhood;

@@ -58,7 +58,7 @@ class Field {
   }
 
   void switchMarked() {
-    _marked != _marked;
+    _marked = !_marked;
   }
 
   void restart() {

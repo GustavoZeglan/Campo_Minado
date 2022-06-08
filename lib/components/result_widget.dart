@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 
 class ResultWidget extends StatelessWidget implements PreferredSizeWidget {
   const ResultWidget({
-    Key key,
     @required this.win,
     @required this.onRestart,
-  }) : super(key: key);
+  });
 
   final bool win;
   final Function onRestart;
@@ -37,16 +36,17 @@ class ResultWidget extends StatelessWidget implements PreferredSizeWidget {
       color: Colors.grey,
       child: SafeArea(
         child: Container(
-          padding: const EdgeInsets.all(0),
+          padding: const EdgeInsets.all(10),
           child: CircleAvatar(
             backgroundColor: _getCor(),
             child: IconButton(
+              padding: const EdgeInsets.all(0),
               icon: Icon(
                 _getIcon(),
                 color: Colors.black,
                 size: 35,
               ),
-              onPressed: onRestart(),
+              onPressed: onRestart,
             ),
           ),
         ),
